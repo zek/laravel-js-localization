@@ -83,6 +83,11 @@
                     return result;
                 }
                 /* if there is nothing to return, return messageKey */
+
+                if (replacements) {
+                    messageKey = applyReplacements(messageKey, replacements);
+                }
+                
                 return messageKey;
             }
 
